@@ -38,9 +38,7 @@ public class CrawlerPost {
                 String entityString = EntityUtils.toString(entity,"gbk");
                 System.out.println(entityString.length());
             }
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (URISyntaxException e) {
+        } catch (IOException | URISyntaxException e) {
             e.printStackTrace();
         } finally {
             if (response!=null) {

@@ -34,13 +34,14 @@ public class CrawlerPostParam {
             URIBuilder uriBuilder = new URIBuilder("http://www.netbian.com/e/search/result");
 
             //创建参数的集合
-            List<NameValuePair> params = new ArrayList<NameValuePair>();
+            List<NameValuePair> params = new ArrayList<>();
             BasicNameValuePair basicNameValuePair = new BasicNameValuePair("searchid","80");
             params.add(basicNameValuePair);
             UrlEncodedFormEntity formEntity = new UrlEncodedFormEntity(params, "utf8");
 
 
             HttpPost httpPost = new HttpPost(uriBuilder.build());
+
             //System.out.println("发起请求的信息" + httpGet);
             httpPost.setEntity(formEntity);
             //访问网站
